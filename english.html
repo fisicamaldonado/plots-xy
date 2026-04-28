@@ -89,7 +89,9 @@
 <a href="https://www.amazon.es/gp/product/B07HVRWHCF" class="centered" target="_blank"><img style = "width: 100%; max-width: 400px; height: auto;" src="plots_icons/banner_eng.gif" alt="banner_en"></a>
 </div>
 <p></p>
-<p class='centered' style="font-weight:bold; color:rgb(61, 61, 61);">(c)2023 Pablo Vaz - Maldonado, Uruguay</p>
+<p class='centered' style="font-weight:bold; color:rgb(61, 61, 61);">
+  (c) <span id="year"></span> Pablo Vaz - Maldonado, Uruguay
+</p>
 <script>
 
 //Define some global variables
@@ -624,6 +626,12 @@ function evaluateQuadraticPolynomial(coefficients, x) {
   return result;
 }
 
+</script>
+<script>
+  const startYear = 2023;
+  const currentYear = new Date().getFullYear();
+  document.getElementById("year").textContent =
+    startYear === currentYear ? startYear : `${startYear} - ${currentYear}`;
 </script>
 </body>
 </html>
